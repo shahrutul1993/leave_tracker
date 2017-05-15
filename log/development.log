@@ -56625,3 +56625,63 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-16 01:06:44 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9950ms (Views: 9935.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-05-16 01:07:28 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 60ms (Views: 41.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-16 01:07:32 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms) [cache miss]
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-16 01:07:38 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c7vkxQjJLZA9CE7sC+iUz2ikkGY6Xq9PvMhSsE/qgOUbqygT0tP6my1QyZFextkUHoPPZI+Ym3GW7ZnRLfd6aQ==", "user"=>{"email"=>"shahrutul111@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "shahrutul111@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-05-15 19:37:38.966280"], ["last_sign_in_at", "2017-05-15 19:14:33.442085"], ["sign_in_count", 28], ["updated_at", "2017-05-15 19:37:38.967768"], ["id", 7]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/leave
+Completed 302 Found in 183ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/leave" for 127.0.0.1 at 2017-05-16 01:07:38 +0530
+Processing by LeaveController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering leave/index.html.erb within layouts/application
+  [1m[36mLeave Load (0.3ms)[0m  [1m[34mSELECT "leaves".* FROM "leaves" WHERE "leaves"."user_id" = ?[0m  [["user_id", 7]]
+  Rendered leave/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 57ms (Views: 35.7ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-16 01:07:46 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QRWw81ysosktXWXldmGQXA9n32aNKkuOQcL95TBVvVPMBYZSP83TMf6xH5If/xQY99RSJ0TRORvKxJZ9iocD6A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-05-16 01:07:46 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
