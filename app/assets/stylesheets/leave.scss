@@ -1,0 +1,99 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.z-pad{
+	padding-top: 31px;
+}
+
+.z-form{
+	padding-bottom: 15px;
+}
+
+span.input-group-addon {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    height: 34px;
+    width: 40px;
+}
+
+.width{
+	min-width: 100px;
+}
+.z-height{
+height: 47px;
+}
+.z-inverse{
+	background-color: #333333;
+    color: white;
+}
+
+.z-pad1{
+	padding-bottom: 14px!important;
+}
+
+.z-hor{
+    padding-top: 26px;
+}
+.text-center{
+    padding-top: 6px;
+}
+
+
+.social-icon {
+  list-style: none;
+  padding: 0;
+  margin: -27px;
+}
+
+.social-icon li{
+  display: inline-block;
+  text-align: center;
+}
+
+.social-icon a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.social-icon a {
+     background: rgb(51, 122, 183);
+    color: #fff;
+}
+
+.social-icon a:hover {
+  background:#090909 ; /* social icon hover background color */
+  color: #fff; /* social icon hover color */
+}
+
+.footer {
+  //position: absolute;
+  bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+  height: 60px;
+  background-color: #f8f8f8;
+  position: absolute;
+}
+.jumbotron p {
+    margin-bottom: 49px;
+    font-size: 21px;
+    font-weight: 200;
+}
+.z-btn{
+    text-align: center;
+    margin-top: -12px;
+}
+.z-leave{
+  font-family: 'Ravi Prakash', cursive;
+    font-size: x-large;
+    border-bottom: 3px solid #337ab7;
+}
+label.control-label.col-sm-2 {
+    margin-top: 21px;
+}
+

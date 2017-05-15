@@ -1,0 +1,39 @@
+<h1 class="text-center">Welcome To Leave Tracking system</h1>
+<p id="notice"><%= notice %></p>
+<div class="col-md-12 text-center">
+<%= link_to 'New Leave', new_leave_path,class: "btn btn-primary text-center" %>
+</div>
+
+ <div class="container">
+<div class="row">
+<div class="col-md-12 z-pad">
+<table class="table table-hover">
+  <thead class="z-inverse">
+    <tr class="z-height">
+      <th class="z-pad1">Title</th>
+      <th class="z-pad1">Start date</th>
+      <th class="z-pad1">End date</th>
+      <th class="z-pad1">No of days</th>
+      <th class="z-pad1">Reason</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leave.each do |leave| %>
+      <tr class="z-height">
+        <td  class="width"><%= leave.title %></td>
+        <td  class="width"><%= leave.start_date %></td>
+        <td class="width"><%= leave.end_date %></td>
+        <td class="width"><%= leave.no_of_days %></td>
+        <td class="width"><%= leave.reason %></td>
+         <!-- <td class="col-md-8"><%= link_to 'Show', leave_path(leave)%></td> -->
+        <!-- <td class="col-md-8"><%= link_to 'Edit', edit_leave_path(leave) %></td>  -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<br>
+

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @leave.title %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @leave.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @leave.end_date %>
+</p>
+
+<p>
+  <strong>No of days:</strong>
+  <%= @leave.no_of_days %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @leave.reason %>s
+</p>
+
+<%= link_to 'Edit', edit_leave_path(@leave) %> |
+<%= link_to 'Back', leave_path %>
+
+
+
+

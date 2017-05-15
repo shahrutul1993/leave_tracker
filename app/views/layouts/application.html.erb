@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LeaveTracking</title>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+</head>
+<body>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	<header class="navbar navbar-fixed-top navbar-default">
+		<div class="container">
+			<div class="col-sm-2">
+			<h4 class="z-leave"><%= link_to "Leave Tracker", root_path %></h4>
+			</div>
+			<nav class="col-sm-10">
+				<ul class="nav navbar-nav navbar-right">
+					<li><% if current_user %>
+						<%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+						<% else %>
+						<div class="col-md-12 text-center">
+							<%= link_to "Register", new_user_registration_path,class: "btn btn-primary" %>
+							<%= link_to "Login",  new_user_session_path ,class: "btn btn-primary" %>
+							<% end %>
+						</div>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<%= yield %>
+
+    <footer class="footer">
+    <p>© Copyright 2017. ShopKnekt. All Rights Reserved.</p>
+      <div class="container">
+
+ <ul class="social-icon animate pull-right">
+
+                  <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li> <!-- change the link to social page and edit title-->
+                  <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+                </div>
+    </footer>
+</body>
+</html>
