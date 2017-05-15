@@ -5,11 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+ruby "2.4.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0.rc1'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -63,6 +63,6 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'dotenv-rails'
-gem 'pg'
 
-ruby "2.4.0"
+
+
