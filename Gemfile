@@ -62,3 +62,5 @@ gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'rspec-rails'
+
+ruby "2.4.0"

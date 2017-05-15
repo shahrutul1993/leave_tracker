@@ -56002,3 +56002,134 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/logout" for 127.0.0.1 at 2017-05-15 21:39:32 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0.rc2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0.rc2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0.rc2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0.rc2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0.rc2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0.rc2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0.rc2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0.rc2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0.rc2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-05-15 21:39:34 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 1392ms (Views: 1384.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-15 21:39:38 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3tbf0VCQFVgTs3ydyWg4V3cNDgdHKOUjiGYyL2qYoSIlDUvk3z2K3sztXUVWMf+I4eeu47YNahojBMaxB5sh+g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-05-15 21:39:38 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-15 21:39:40 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms) [cache miss]
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-15 21:39:46 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ro5zUYYWJA1KlX1ZCGGRPg8vjWaVPiXzibm+Qqk5opVciaC9pnHiCn2Hm5Mzltka7uCWuvTp+D+xVqzVEbIcQw==", "user"=>{"email"=>"shahrutul111@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "shahrutul111@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-05-15 16:09:46.204801"], ["last_sign_in_at", "2017-05-15 13:18:38.090444"], ["sign_in_count", 26], ["updated_at", "2017-05-15 16:09:46.205649"], ["id", 7]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/leave
+Completed 302 Found in 183ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/leave" for 127.0.0.1 at 2017-05-15 21:39:46 +0530
+Processing by LeaveController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering leave/index.html.erb within layouts/application
+  [1m[36mLeave Load (0.4ms)[0m  [1m[34mSELECT "leaves".* FROM "leaves" WHERE "leaves"."user_id" = ?[0m  [["user_id", 7]]
+  Rendered leave/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 60ms (Views: 37.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/leave/new" for 127.0.0.1 at 2017-05-15 21:39:48 +0530
+Processing by LeaveController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering leave/new.html.erb within layouts/application
+  Rendered leave/_form.html.erb (10.8ms) [cache miss]
+  Rendered leave/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/leave" for 127.0.0.1 at 2017-05-15 21:40:07 +0530
+Processing by LeaveController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6iYI435QMSxA6bYA7vm0BLCtrdO/CrehqvtZ9ODNd0Mpib9V1gnbbfO1rTc/j//dacSccXygTK8cnXk3lriHA==", "leave"=>{"title"=>"sick4", "start_date(1i)"=>"2017", "start_date(2i)"=>"5", "start_date(3i)"=>"15", "end_date(1i)"=>"2017", "end_date(2i)"=>"5", "end_date(3i)"=>"19", "no_of_days"=>"4", "reason"=>"infection"}, "commit"=>"Submit leave"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "leaves" ("title", "start_date", "end_date", "no_of_days", "reason", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sick4"], ["start_date", "2017-05-15"], ["end_date", "2017-05-19"], ["no_of_days", 4], ["reason", "infection"], ["created_at", "2017-05-15 16:10:07.033088"], ["updated_at", "2017-05-15 16:10:07.033088"], ["user_id", 7]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/leave
+Completed 302 Found in 9ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/leave" for 127.0.0.1 at 2017-05-15 21:40:07 +0530
+Processing by LeaveController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering leave/index.html.erb within layouts/application
+  [1m[36mLeave Load (0.3ms)[0m  [1m[34mSELECT "leaves".* FROM "leaves" WHERE "leaves"."user_id" = ?[0m  [["user_id", 7]]
+  Rendered leave/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-15 21:40:15 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q4kvG7wqOHHXe6BPnhur8DedIT6elQmuQwgtaKatm4AQh5HFZotf2NG20CNBXnLfUPiF+BWbokJ50bXrq3RMQQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-05-15 21:40:15 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
