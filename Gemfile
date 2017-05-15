@@ -63,6 +63,6 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'dotenv-rails'
-
+gem 'sqlite3'
 
 

@@ -1,6 +1,36 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+
+body {
+  background: url('http://d12o043r8f33ql.cloudfront.net/snapwiresnaps/regular/tumblr_nskqkzPT2B1teue7jo1_1280.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index:-100;
+}
+
+.container {
+   z-index:2;
+}
+
+.header {
+  margin-top:12%;
+  color:#fff;
+}
+
+.header h1 {
+   color:#fff;
+}
+.caption{
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+
 .z-pad{
 	padding-top: 31px;
 }
